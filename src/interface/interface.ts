@@ -8,13 +8,27 @@ export interface IPosts {
 }
 
 export interface IPostProps {
-    post: IPosts
+    post: IPosts,
+    page: number
+}
+
+export interface IFilterParam {
+    searchParam: string,
+    sortParam: string
 }
 
 export interface ISearchProps {
-    setSearchParam: React.Dispatch<React.SetStateAction<string>>
+    filterParam: IFilterParam,
+    setFilterParam: React.Dispatch<IFilterParam>
 }
 
 export interface InitialStatePage {
     postsNumber: number
+}
+
+export interface PostsTableProps {
+    posts: IPosts[],
+    page: number,
+    filterParam: IFilterParam,
+    setFilterParam: React.Dispatch<IFilterParam>
 }
