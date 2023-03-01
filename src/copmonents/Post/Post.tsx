@@ -3,7 +3,7 @@ import {IPostProps} from "../../interface/interface";
 
 import '../../style/Post.css'
 
-const Post = ({post}: IPostProps) => {
+const Post: React.FC<IPostProps> = ({post}) => {
     return (
         <div className='post'>
             <div><p className='post_id'>{post.id}</p></div>

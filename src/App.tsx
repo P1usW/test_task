@@ -11,14 +11,14 @@ import './style/App.css';
 
 
 function App() {
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState<boolean>(true)
 
     const [filterParam, setFilterParam] = useState<IFilterParam>({searchParam: '', sortParam: ''})
     const [posts, setPosts] = useState<IPosts[]>([]);
 
     const [url] = useState<string>('https://jsonplaceholder.typicode.com/posts');
     const [page, setPage] = useState<number>(1)
-    const [totalPages, setTotalPages] = useState(0);
+    const [totalPages, setTotalPages] = useState(1);
     const limit = useSelector((state: InitialStatePage) => state.postsNumber);
 
     let pageArray = [];

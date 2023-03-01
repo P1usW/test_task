@@ -7,8 +7,6 @@ type ReactCE<H> = React.ChangeEvent<H>
 
 
 const SearchForm: FC<ISearchProps> = ({filterParam, setFilterParam}) => {
-    const label: React.MutableRefObject<HTMLLabelElement | null> = useRef(null);
-
     function searchInput(event: ReactCE<HTMLInputElement>) {
         setFilterParam({...filterParam, searchParam: event.target.value});
     }
