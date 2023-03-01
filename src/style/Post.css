@@ -1,0 +1,22 @@
+.post {
+    display: grid;
+    grid-template-columns: 1fr 6fr 6fr;
+    grid-gap: 1px;
+    border-top: #E3E6EC 1px solid;
+}
+
+.post div {
+    background-color: white;
+}
+
+.post_id {
+    text-align: center;
+}
+
+.post_title {
+
+}
+
+.post_description {
+
+}

@@ -1,0 +1,25 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #E3E6EC;
+    border: #E3E6EC 1px solid;
+}
+
+.posts_headers {
+    display: grid;
+    grid-template-columns: 1fr 6fr 6fr;
+    width: 100%;
+    background-color: #474955;
+    color: white;
+
+}
+
+
+.posts_header {
+    height: 54px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

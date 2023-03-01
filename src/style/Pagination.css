@@ -1,0 +1,41 @@
+.pagination {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page_buttons {
+    list-style: none;
+    display: flex;
+}
+
+.page_button__current {
+    background-color: #5A5C66;
+    color: white;
+
+}
+
+.page_button__not-current {
+
+}
+
+.btn {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #5A5C66 1px solid;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #5A5C66;
+    color: white;
+}
+
+.btn_bf {
+    width: 75px;
+    height: 25px;
+}

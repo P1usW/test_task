@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import SearchForm from "./copmonents/SearchForm/SearchForm";
+import PostsTable from "./copmonents/PostsTable/PostsTable";
+
+import './style/App.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [searchParam, setSearchParam] = useState<string>('');
+    const [headerSort, setHeaderSort] = useState<string>('')
+
+    return (
+        <div className='container'>
+            <SearchForm setSearchParam={setSearchParam}/>
+            <PostsTable/>
+        </div>
+    );
 }
 
 export default App;
