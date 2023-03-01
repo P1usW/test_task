@@ -6,34 +6,21 @@ import '../../style/Searchform.css'
 type ReactCE<H> = React.ChangeEvent<H>
 
 
-const SearchForm: FC<ISearchProps> = ({setSearchParam}) => {
+const SearchForm: FC<ISearchProps> = ({filterParam, setFilterParam}) => {
     const label: React.MutableRefObject<HTMLLabelElement | null> = useRef(null);
 
     function searchInput(event: ReactCE<HTMLInputElement>) {
-        setSearchParam(event.target.value);
+        setFilterParam({...filterParam, searchParam: event.target.value});
     }
-
-    function labelOut(event: React.SyntheticEvent) {
-        if (label.current !== null) label.current.style.top = '-5rem'
-        if (label.current !== null) label.current.style.color = 'black'
-    }
-
-    function labelIn(event: React.SyntheticEvent) {
-        if (label.current !== null) label.current.style.top = '0'
-        if (label.current !== null) label.current.style.color = ''
-    }
-
 
     return (
         <div className='search'>
             <input className='search_input'
                 type='search'
                 id='search'
+                placeholder='Search...'
                 onChange={searchInput}
-                onFocus={labelOut}
-                onBlur={labelIn}
             />
-            <label ref={label} htmlFor='search' className='search_label'>Search</label>
         </div>
 
     );
